@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import ReactDOM from "react-dom";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import { useMap } from 'react-leaflet/hooks'
 import { CircleMarker } from 'react-leaflet/CircleMarker'
@@ -26,113 +27,156 @@ console.log("yo");
 
 const LIVE_BUS = "https://tfe-opendata.com/api/v1/live_bus_times/";
 
-const myIcon = () =>
+const COLOURS = {
+  bus: "red",
+  tram: "green"
+}
+
+const myIcon = (colour = "red") =>
   L.divIcon({
     className: "bus-stop",
     html: `<div style="
-      width:8px;height:8px;
-      background:red;
+      width:12px;height:12px;
+      background:${COLOURS[colour] || "orange"};
       border-radius:50%;
       border:2px solid white;"></div>`,
-    iconSize: [16,16]
+    iconSize: [32,32]
   });
 
-const lineIcon = (lineId = "default") =>
-  L.divIcon({
-    className: "tube-marker",
-    html: `<div style="
-      background:orange;
-      width:12px;height:12px;
-      border-radius:50%;
-      border:2px solid white;"></div>`,
-    iconSize: [16, 16],
-  });
+
+function Popp({content}) {
+  //console.log(typeof(content));
+  if (typeof(content) == "string" || (content.hasOwnProperty('content'))) {
+    //console.log("stringg");
+    return (
+      <div id="popupContent"><p>{content}</p></div>
+    );
+  }
+  else {
+    console.log("toilet");
+    console.log(content);
+    console.log(typeof(content));
+    return (
+      <>{
+      content.map((st) => {
+        return (
+          <div class="bus">
+          <p><strong>{st.route}</strong> to {st.dest} {st.early}</p>
+          </div>
+        )
+      })
+    }
+    </>
+    )
+  }
+};
 
 function MyComponent() {
   const popupRef = useRef(null);
-  const [popupContent, setPopupContent] = useState('Loading');
+  const [popupContent, setPopupContent] = useState("Loading");
+  const [centre, setCentre] = useState([55.95, -3.18]);
+  const [zoom, setZoom] = useState(12);
+
   const [stops, setStops] = useState([]); //this is to let stops be updatable
-  const mapp = useMap()
+  const mapp = useMap();
   //console.log(map.getZoom());
 
-  const handlePopupOpen = (key) => {
-      setPopupContent("Loading");
-      let word = LIVE_BUS + key;
-      let newContent = null;
-      console.log(word);
-      fetch(word)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data != null) {
-          console.log("hello");
-          newContent = data.map((s) => ({
-            route: s.routeName,
-            early: s.departures[0].departureTime
-          }))
-          console.log(newContent.route);
-          setPopupContent(newContent[0].route);
-        }
-        else {
-          setPopupContent("No routes inbound")
-        }
-        
-      })
 
-
-    };
-
-
-  //console.log('map center:', map.getCenter());
-  const centre = mapp.getCenter();
-  //console.log(map.getZoom());
   useEffect(() => {
+    //console.log("ftech");
     fetch('https://tfe-opendata.com/api/v1/stops')
     .then((res) => res.json())
     .then((data) => {
-        const stops = data.stops.map((s) => ({
+        //console.log("data");
+        const stopps = data.stops.map((s) => ({
             id: s.stop_id,
             name: s.name,
             lat: s.latitude,
             lon: s.longitude,
             type: s.service_type
         }));
-        setStops(stops.filter(s => s.type=="bus")) //creates a lovely json file!
+        //console.log("set stops");
+        setStops(stopps); //creates a lovely json file!
     });
+  }, []);
+
+  useMapEvents({
+    zoomend: (e) => {
+      setZoom(e.target.getZoom());
+      setCentre(e.target.getCenter());
+    },
+    moveend: (e) => {
+      setCentre(e.target.getCenter());
+    },
   });
 
+
+  function handlePopupOpen(key) {
+    setPopupContent("Loading");
+    let word = LIVE_BUS + key;
+    let newContent = null;
+    console.log(word);
+    fetch(word)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data != null) {
+          newContent = data.map((s) => ({
+            route: s.routeName,
+            early: s.departures[0].departureTime,
+            dest: s.departures[0].destination
+          }));
+          //console.log(JSON.stringify(newContent));
+          setPopupContent(newContent.length > 0 ? newContent : "No routes found");
+        }
+        else {
+          setPopupContent("No routes found");
+        }
+      });
+
+
+  }
+
+
+  //console.log('map center:', map.getCenter());
+  //const centre = mapp.getCenter();
+  //console.log(map.getZoom());
+  
   if (mapp.getZoom() >= 15) {
     //console.log("happy")
     return (
-    stops.map((st) => {
-      //console.log(stops);
-      // Render the station
-      const latd = 0.010
-      const lond = 0.030
-      if (Math.abs(st.lat-centre.lat) <= latd && Math.abs(st.lon-centre.lng) <= lond) { 
-      return (
-        <Marker
-          key={st.id}
-          position={[st.lat, st.lon]}
-          icon={myIcon()}
-          eventHandlers={{
-          click: () => {
-                    handlePopupOpen(st.id);
+      <>
+        {stops.map((st) => {
+          //console.log(stops);
+          // Render the station
+          const latd = 0.010;
+          const lond = 0.030;
+          if (Math.abs(st.lat-centre.lat) <= latd && Math.abs(st.lon-centre.lng) <= lond) { 
+          return (
+            <Marker
+              key={st.id}
+              position={[st.lat, st.lon]}
+              icon={myIcon(st.type)}
+              eventHandlers={{
+                click: () => {
+                  handlePopupOpen(st.id);
                 },
-        }}>
-          <Popup>
-            <strong>{st.name}</strong>
-            <div id="popupContent">{popupContent}</div>
-
-          </Popup>
-        </Marker>
-      );
-    }
-    else return null
-
-    }))}
+              }}
+            >
+              <Popup>
+                <strong>{st.name}</strong>
+                <Popp content={popupContent} />
+              </Popup>
+            </Marker>
+          );
+        }
+        return null;
+      })}
+    </>
+  );
+  }
   else {
-    console.log("sad")
-    return null
+    //console.log("sad")
+    return null;
   }
 }
 
