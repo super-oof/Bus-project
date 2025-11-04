@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import { useMap } from 'react-leaflet/hooks'
 import { CircleMarker } from 'react-leaflet/CircleMarker'
@@ -24,19 +24,7 @@ xhr.send();
 console.log("yo");
 //var m = xhr.send("GET /v1/live_bus_times/8")*/
 
-const LINE_COLORS = {
-  bakerloo: "#894E24",
-  central: "#DC241F",
-  circle: "#FFCE00",
-  district: "#007229",
-  "hammersmith-city": "#D799AF",
-  jubilee: "#6A7278",
-  metropolitan: "#751056",
-  northern: "#000000",
-  piccadilly: "#0019A8",
-  victoria: "#00A0E2",
-  "waterloo-city": "#76D0BD",
-};
+const LIVE_BUS = "https://tfe-opendata.com/api/v1/live_bus_times/";
 
 const myIcon = () =>
   L.divIcon({
@@ -61,14 +49,42 @@ const lineIcon = (lineId = "default") =>
   });
 
 function MyComponent() {
+  const popupRef = useRef(null);
+  const [popupContent, setPopupContent] = useState('Loading');
   const [stops, setStops] = useState([]); //this is to let stops be updatable
-  const map = useMap()
+  const mapp = useMap()
   //console.log(map.getZoom());
 
+  const handlePopupOpen = (key) => {
+      setPopupContent("Loading");
+      let word = LIVE_BUS + key;
+      let newContent = null;
+      console.log(word);
+      fetch(word)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data != null) {
+          console.log("hello");
+          newContent = data.map((s) => ({
+            route: s.routeName,
+            early: s.departures[0].departureTime
+          }))
+          console.log(newContent.route);
+          setPopupContent(newContent[0].route);
+        }
+        else {
+          setPopupContent("No routes inbound")
+        }
+        
+      })
 
-  console.log('map center:', map.getCenter());
-  const centre = map.getCenter();
-  console.log(map.getZoom());
+
+    };
+
+
+  //console.log('map center:', map.getCenter());
+  const centre = mapp.getCenter();
+  //console.log(map.getZoom());
   useEffect(() => {
     fetch('https://tfe-opendata.com/api/v1/stops')
     .then((res) => res.json())
@@ -84,8 +100,8 @@ function MyComponent() {
     });
   });
 
-  if (map.getZoom() >= 15) {
-    console.log("happy")
+  if (mapp.getZoom() >= 15) {
+    //console.log("happy")
     return (
     stops.map((st) => {
       //console.log(stops);
@@ -95,12 +111,18 @@ function MyComponent() {
       if (Math.abs(st.lat-centre.lat) <= latd && Math.abs(st.lon-centre.lng) <= lond) { 
       return (
         <Marker
-          //key={st.id}
+          key={st.id}
           position={[st.lat, st.lon]}
           icon={myIcon()}
-        >
+          eventHandlers={{
+          click: () => {
+                    handlePopupOpen(st.id);
+                },
+        }}>
           <Popup>
             <strong>{st.name}</strong>
+            <div id="popupContent">{popupContent}</div>
+
           </Popup>
         </Marker>
       );
