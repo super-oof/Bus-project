@@ -36,15 +36,15 @@ const myIcon = (colour = "red") =>
   L.divIcon({
     className: "bus-stop",
     html: `<div style="
-      width:12px;height:12px;
+      width:16px;height:16px;
       background:${COLOURS[colour] || "orange"};
       border-radius:50%;
       border:2px solid white;"></div>`,
-    iconSize: [32,32]
+    iconSize: [20,20]
   });
 
 
-function Popp({content}) {
+function Popp({content, routes, setRoutes}) {
   //console.log(typeof(content));
   if (typeof(content) == "string" || (content.hasOwnProperty('content'))) {
     //console.log("stringg");
@@ -53,15 +53,27 @@ function Popp({content}) {
     );
   }
   else {
-    console.log("toilet");
-    console.log(content);
-    console.log(typeof(content));
+    console.log("data to load");
+    //console.log(content);
+    //console.log(typeof(content));
     return (
       <>{
       content.map((st) => {
+        let timer = st.unixtime - Math.floor(Date.now() / 1000);
+        timer = Math.round(timer/60);
+        let timerOut = "";
+        //console.log(typeof(timer));
+
+        if (timer==1) {timerOut="in 1 min"}
+        else if (timer==0) {timerOut="due"}
+        else if (timer<0) {timerOut="overdue"}
+        else {timerOut= ("in "+timer+" mins")}
         return (
-          <div class="bus">
-          <p><strong>{st.route}</strong> to {st.dest} {st.early}</p>
+          <div class="bus" style={{whiteSpace: "nowrap"}}>
+          <p style={{color: routes[st.route]? routes[st.route].textt : "white", backgroundColor: routes[st.route] ? routes[st.route].colour : "green", display:"inline", paddingLeft: "2px", paddingRight: "2px", marginTop: "2px", marginBottom: "2px"}}>
+            {st.route}
+            
+            </p> to {st.dest} {timerOut}
           </div>
         )
       })
@@ -76,7 +88,7 @@ function MyComponent() {
   const [popupContent, setPopupContent] = useState("Loading");
   const [centre, setCentre] = useState([55.95, -3.18]);
   const [zoom, setZoom] = useState(12);
-
+  const [routes, setRoutes] = useState([]);
   const [stops, setStops] = useState([]); //this is to let stops be updatable
   const mapp = useMap();
   //console.log(map.getZoom());
@@ -97,6 +109,44 @@ function MyComponent() {
         }));
         //console.log("set stops");
         setStops(stopps); //creates a lovely json file!
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log("Start");
+    fetch('routes.json',{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    })
+    .then((res)=>res.json())
+    .then((data) => {
+      console.log("starting fetch");
+      console.log(data);
+
+      let routed = data.groups
+      let busDict = {}
+      for (let i=0; i< routed.length; i++) {
+        //console.log(routed[i]);
+
+        for (let j=0; j < routed[i].routes.length; j++) {
+          let ok = routed[i].routes[j];
+          let comp = {
+            //id: ok.id,
+            colour: ok.color,
+            desc: ok.description,
+            textt: ok.textColor
+          }
+          busDict[ok.id] = comp;
+          //console.log(comp);
+          //tempObj.append(comp);
+        }
+      }
+      //console.log(busDict);
+      console.log("fetched bus route data");
+      setRoutes(busDict);
+
     });
   }, []);
 
@@ -123,6 +173,7 @@ function MyComponent() {
           newContent = data.map((s) => ({
             route: s.routeName,
             early: s.departures[0].departureTime,
+            unixtime: s.departures[0].departureTimeUnix,
             dest: s.departures[0].destination
           }));
           //console.log(JSON.stringify(newContent));
@@ -164,7 +215,7 @@ function MyComponent() {
             >
               <Popup>
                 <strong>{st.name}</strong>
-                <Popp content={popupContent} />
+                <Popp content={popupContent} routes={routes} setRoutes={setRoutes}/>
               </Popup>
             </Marker>
           );
