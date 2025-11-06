@@ -1,0 +1,1032 @@
+{
+    "server": "LothianAPI",
+    "timeElapsed": 2.8,
+    "networkTime": "2025-11-05 18:55:58",
+    "groups": [
+        {
+            "id": "lothian",
+            "name": "Lothian Bus Services",
+            "description": "We have over 50 day bus routes across Edinburgh and the Lothians.",
+            "routes": [
+                {
+                    "id": "1",
+                    "name": "1",
+                    "description": "Clermiston - Seafield",
+                    "transitMode": null,
+                    "color": "#98C8ED",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "2",
+                    "name": "2",
+                    "description": "Hermiston Gait - The Jewel",
+                    "transitMode": null,
+                    "color": "#4DA32F",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "3",
+                    "name": "3",
+                    "description": "Clovenstone - Mayfield",
+                    "transitMode": null,
+                    "color": "#DECE00",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "4",
+                    "name": "4",
+                    "description": "Hillend - Queen Margaret Uni",
+                    "transitMode": null,
+                    "color": "#D7B5CE",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "5",
+                    "name": "5",
+                    "description": "Hunter's Tryst - The Jewel",
+                    "transitMode": null,
+                    "color": "#F9B233",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "7",
+                    "name": "7",
+                    "description": "Newhaven - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#F49F95",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "8",
+                    "name": "8",
+                    "description": "Muirhouse - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#117032",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "9",
+                    "name": "9",
+                    "description": "Muirhouse - King's Buildings",
+                    "transitMode": null,
+                    "color": "#BC8B89",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "10",
+                    "name": "10",
+                    "description": "Ocean Terminal - Bonaly",
+                    "transitMode": null,
+                    "color": "#6A2655",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "11",
+                    "name": "11",
+                    "description": "Western Harbour - Hyvots Bank",
+                    "transitMode": null,
+                    "color": "#B11A23",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "12",
+                    "name": "12",
+                    "description": "Gyle Centre - Portobello",
+                    "transitMode": null,
+                    "color": "#9CC872",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X12",
+                    "name": "X12",
+                    "description": "Ingliston Park & Ride - Murrayfield Stadium",
+                    "transitMode": null,
+                    "color": "#8C1713",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "14",
+                    "name": "14",
+                    "description": "Muirhouse - Greendykes",
+                    "transitMode": null,
+                    "color": "#A69DAD",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "15",
+                    "name": "15",
+                    "description": "King's Road - Easter Bush",
+                    "transitMode": null,
+                    "color": "#794E34",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "16",
+                    "name": "16",
+                    "description": "Silverknowes - Torphin",
+                    "transitMode": null,
+                    "color": "#AE9A64",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "17",
+                    "name": "17",
+                    "description": "Airport - Ocean Terminal",
+                    "transitMode": null,
+                    "color": "#5A934F",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "18",
+                    "name": "18",
+                    "description": "Airport - Fort Kinnaird",
+                    "transitMode": null,
+                    "color": "#C96CA5",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "19",
+                    "name": "19",
+                    "description": "Granton - Eastfield",
+                    "transitMode": null,
+                    "color": "#C57F00",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "20",
+                    "name": "20",
+                    "description": "The Calders - Chesser",
+                    "transitMode": null,
+                    "color": "#00A651",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "21",
+                    "name": "21",
+                    "description": "Gyle Centre or Clovenstone - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#D7B27B",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "22",
+                    "name": "22",
+                    "description": "Gyle Centre - Granton Harbour",
+                    "transitMode": null,
+                    "color": "#7C3F61",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "22A",
+                    "name": "22A",
+                    "description": "Lothian Road - Gyle Centre",
+                    "transitMode": null,
+                    "color": "#7C3F61",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "23",
+                    "name": "23",
+                    "description": "Trinity - Greenbank",
+                    "transitMode": null,
+                    "color": "#27348B",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "24",
+                    "name": "24",
+                    "description": "West Granton - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#E7657F",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "25",
+                    "name": "25",
+                    "description": "Heriot-Watt Uni - Restalrig",
+                    "transitMode": null,
+                    "color": "#951B81",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "26",
+                    "name": "26",
+                    "description": "Clerwood - Seton Sands",
+                    "transitMode": null,
+                    "color": "#E30613",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X26",
+                    "name": "X26",
+                    "description": "Port Seton - Edinburgh",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "27",
+                    "name": "27",
+                    "description": "Silverknowes - Hunter's Tryst",
+                    "transitMode": null,
+                    "color": "#ED6F30",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "29",
+                    "name": "29",
+                    "description": "Silverknowes - Gorebridge",
+                    "transitMode": null,
+                    "color": "#AC8ABF",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X29",
+                    "name": "X29",
+                    "description": "Gorebridge - Edinburgh",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "30",
+                    "name": "30",
+                    "description": "Clovenstone - Queen Margaret Uni",
+                    "transitMode": null,
+                    "color": "#CA8C16",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "31",
+                    "name": "31",
+                    "description": "East Craigs - Bonnyrigg or Polton Mill",
+                    "transitMode": null,
+                    "color": "#7B6A58",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X31",
+                    "name": "X31",
+                    "description": "Rosewell - Edinburgh",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "32",
+                    "name": "32",
+                    "description": "Cramond - Balerno",
+                    "transitMode": null,
+                    "color": "#F7941D",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "33",
+                    "name": "33",
+                    "description": "Westburn - Millerhill",
+                    "transitMode": null,
+                    "color": "#901426",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X33",
+                    "name": "X33",
+                    "description": "Gorebridge - Edinburgh",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "34",
+                    "name": "34",
+                    "description": "Heriot-Watt Uni - Ocean Terminal",
+                    "transitMode": null,
+                    "color": "#2B2171",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "35",
+                    "name": "35",
+                    "description": "Heriot-Watt Uni - Ocean Terminal",
+                    "transitMode": null,
+                    "color": "#BA313D",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "36",
+                    "name": "36",
+                    "description": "Gyle Centre - Ocean Terminal",
+                    "transitMode": null,
+                    "color": "#327775",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "37",
+                    "name": "37",
+                    "description": "Silverknowes - Penicuik Deanburn or Easter Bush",
+                    "transitMode": null,
+                    "color": "#355FAA",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X37",
+                    "name": "X37",
+                    "description": "Penicuik - Edinburgh",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "38",
+                    "name": "38",
+                    "description": "West Granton - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#9AB9AF",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "44",
+                    "name": "44",
+                    "description": "Balerno - Wallyford or Whitecraig",
+                    "transitMode": null,
+                    "color": "#9D9D9C",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "45",
+                    "name": "45",
+                    "description": "Heriot-Watt Uni - King's Road",
+                    "transitMode": null,
+                    "color": "#51B8BB",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "46",
+                    "name": "46",
+                    "description": "Rosewell - Musselburgh",
+                    "transitMode": null,
+                    "color": "#93AF24",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "47",
+                    "name": "47",
+                    "description": "Cammo - Penicuik Ladywood",
+                    "transitMode": null,
+                    "color": "#7B9CC0",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "47B",
+                    "name": "47B",
+                    "description": "Cammo - Penicuik Ladywood via Easter Bush",
+                    "transitMode": null,
+                    "color": "#7B9CC0",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X47",
+                    "name": "X47",
+                    "description": "Cammo - Frederick Street",
+                    "transitMode": null,
+                    "color": "#FDD835",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "48",
+                    "name": "48",
+                    "description": "Gorebridge - Musselburgh",
+                    "transitMode": null,
+                    "color": "#52516E",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "49",
+                    "name": "49",
+                    "description": "Royal Infirmary - Fort Kinnaird",
+                    "transitMode": null,
+                    "color": "#16A0BB",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "Uni",
+                    "name": "Uni",
+                    "description": "University of Edinburgh Shuttle",
+                    "transitMode": null,
+                    "color": "#8C1713",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                }
+            ]
+        },
+        {
+            "id": "airport",
+            "name": "Airport Services",
+            "description": "24\/7 Express Service between Edinburgh Airport and Edinburgh City Centre.",
+            "routes": [
+                {
+                    "id": "100",
+                    "name": "100",
+                    "description": "Airlink: Airport - City Centre Express",
+                    "transitMode": null,
+                    "color": "#002C4D",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                }
+            ]
+        },
+        {
+            "id": "eastcoast",
+            "name": "EastCoastbuses",
+            "description": "Our network for East Lothian, North Berwick and Dunbar.",
+            "routes": [
+                {
+                    "id": "X4",
+                    "name": "X4",
+                    "description": "Tranent - Edinburgh",
+                    "transitMode": null,
+                    "color": "#F15A29",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X5",
+                    "name": "X5",
+                    "description": "North Berwick - Edinburgh",
+                    "transitMode": null,
+                    "color": "#4366B0",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X6",
+                    "name": "X6",
+                    "description": "Haddington - Western General Hospital",
+                    "transitMode": null,
+                    "color": "#000000",
+                    "textColor": "#D5609F",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X7",
+                    "name": "X7",
+                    "description": "Dunbar - Edinburgh",
+                    "transitMode": null,
+                    "color": "#DA1C5C",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "106",
+                    "name": "106",
+                    "description": "Haddington - Fort Kinnaird or Western General Hospital",
+                    "transitMode": null,
+                    "color": "#CD8BB5",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "107",
+                    "name": "107",
+                    "description": "Musselburgh - Dunbar",
+                    "transitMode": null,
+                    "color": "#CD8BB5",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "113",
+                    "name": "113",
+                    "description": "Pencaitland - Edinburgh",
+                    "transitMode": null,
+                    "color": "#00A651",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "120",
+                    "name": "120",
+                    "description": "North Berwick - Dunbar",
+                    "transitMode": null,
+                    "color": "#7D3F61",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "121",
+                    "name": "121",
+                    "description": "North Berwick - Haddington",
+                    "transitMode": null,
+                    "color": "#C4802A",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "123",
+                    "name": "123",
+                    "description": "Haddington\/Gifford Circle",
+                    "transitMode": null,
+                    "color": "#7B9CC0",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "124",
+                    "name": "124",
+                    "description": "North Berwick - Edinburgh",
+                    "transitMode": null,
+                    "color": "#20419A",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "125",
+                    "name": "125",
+                    "description": "Musselburgh - North Berwick HS",
+                    "transitMode": null,
+                    "color": "#FF9800",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "126",
+                    "name": "126",
+                    "description": "Aberlady - North Berwick HS",
+                    "transitMode": null,
+                    "color": "#FF9800",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "127",
+                    "name": "127",
+                    "description": "Longniddry - North Berwick HS",
+                    "transitMode": null,
+                    "color": "#FF9800",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "128",
+                    "name": "128",
+                    "description": "Longniddry - Preston Lodge HS",
+                    "transitMode": null,
+                    "color": "#FF9800",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "139",
+                    "name": "139",
+                    "description": "Dalkeith Campus - Midlothian Community Hospital",
+                    "transitMode": null,
+                    "color": "#A884B7",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "140",
+                    "name": "140",
+                    "description": "Musselburgh - Penicuik via Roslin",
+                    "transitMode": null,
+                    "color": "#6B1687",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "141",
+                    "name": "141",
+                    "description": "Musselburgh - Penicuik via Easter Bush",
+                    "transitMode": null,
+                    "color": "#6B1687",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                }
+            ]
+        },
+        {
+            "id": "country",
+            "name": "Lothian Country",
+            "description": "We have a range of services throughout Queensferry and West Lothian.",
+            "routes": [
+                {
+                    "id": "43",
+                    "name": "43",
+                    "description": "Queensferry - Edinburgh",
+                    "transitMode": null,
+                    "color": "#387823",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "70",
+                    "name": "70",
+                    "description": "Gyle Centre - Hermiston P&R (via Ratho)",
+                    "transitMode": null,
+                    "color": "#A8CCC1",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "71",
+                    "name": "71",
+                    "description": "Queensferry - Gyle Centre",
+                    "transitMode": null,
+                    "color": "#E29C9A",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "72",
+                    "name": "72",
+                    "description": "Fauldhouse - Winchburgh",
+                    "transitMode": null,
+                    "color": "#95C11F",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "73",
+                    "name": "73",
+                    "description": "Armadale - Livingston",
+                    "transitMode": null,
+                    "color": "#BE1622",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "74",
+                    "name": "74",
+                    "description": "Fauldhouse - Blackburn",
+                    "transitMode": null,
+                    "color": "#C88014",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X18",
+                    "name": "X18",
+                    "description": "Whitburn - Edinburgh",
+                    "transitMode": null,
+                    "color": "#A6529A",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X19",
+                    "name": "X19",
+                    "description": "Winchburgh - Edinburgh",
+                    "transitMode": null,
+                    "color": "#09488A",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X27",
+                    "name": "X27",
+                    "description": "Bathgate - Edinburgh",
+                    "transitMode": null,
+                    "color": "#00A0DD",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X28",
+                    "name": "X28",
+                    "description": "Bathgate - Edinburgh",
+                    "transitMode": null,
+                    "color": "#00A0DD",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "X40",
+                    "name": "X40",
+                    "description": "St. John's Hospital - Royal Infirmary",
+                    "transitMode": null,
+                    "color": "#FBB040",
+                    "textColor": "#000000",
+                    "outbound": null,
+                    "inbound": null
+                }
+            ]
+        },
+        {
+            "id": "nightbus",
+            "name": "NightBus",
+            "description": null,
+            "routes": [
+                {
+                    "id": "N1",
+                    "name": "N1",
+                    "description": "Nightbus: City Centre - Clerwood",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N3",
+                    "name": "N3",
+                    "description": "Nightbus: Haymarket - Gorebridge",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N11",
+                    "name": "N11",
+                    "description": "Nightbus: City Centre - Hyvots Bank",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N14",
+                    "name": "N14",
+                    "description": "Nightbus: Muirhouse - Surgeons' Hall",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N16",
+                    "name": "N16",
+                    "description": "Nightbus: Silverknowes - Torphin",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N18",
+                    "name": "N18",
+                    "description": "Nightbus: Edinburgh - Bathgate",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N25",
+                    "name": "N25",
+                    "description": "Nightbus: City Centre - Heriot-Watt Uni",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N26",
+                    "name": "N26",
+                    "description": "Nightbus: Haymarket - Seton Sands",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N28",
+                    "name": "N28",
+                    "description": "Nightbus: Edinburgh - Bathgate",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N30",
+                    "name": "N30",
+                    "description": "Nightbus: Westside Plaza - Musselburgh",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N31",
+                    "name": "N31",
+                    "description": "Nightbus: City Centre - Bonnyrigg",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N35",
+                    "name": "N35",
+                    "description": "Nightbus: Ocean Terminal - Heriot-Watt Uni",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N37",
+                    "name": "N37",
+                    "description": "Nightbus: Silverknowes - Penicuik",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N43",
+                    "name": "N43",
+                    "description": "Nightbus: Edinburgh - Deans",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N44",
+                    "name": "N44",
+                    "description": "Nightbus: City Centre - Balerno",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N107",
+                    "name": "N107",
+                    "description": "Nightbus: Edinburgh - Dunbar",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N113",
+                    "name": "N113",
+                    "description": "Nightbus: Edinburgh - Ormiston",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                },
+                {
+                    "id": "N124",
+                    "name": "N124",
+                    "description": "Nightbus: Edinburgh - North Berwick",
+                    "transitMode": null,
+                    "color": "#0C1436",
+                    "textColor": "#FFFFFF",
+                    "outbound": null,
+                    "inbound": null
+                }
+            ]
+        }
+    ]
+}
